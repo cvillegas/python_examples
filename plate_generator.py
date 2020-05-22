@@ -1,3 +1,10 @@
+# Name: plate_generator.py
+# Version: 0.1
+# Author: Cesar Villegas Ureta - https//www.slayerx.org/
+# GitHub repo: https://github.com/cvillegas/python_examples
+# License: MIT License
+# Description: Print random plates based on certain criteria 
+
 from random import choice
 from string import (
     digits,

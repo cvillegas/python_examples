@@ -1,3 +1,10 @@
+# Name: promedio_de_longitud.py
+# Version: 0.1
+# Author: Cesar Villegas Ureta - https//www.slayerx.org/
+# GitHub repo: https://github.com/cvillegas/python_examples
+# License: MIT License
+# Description: Contar palabras y sacar promedio de la extensión de las mismas
+
 texto = input("Ingrese un texto: ")
 texto = texto.strip()
 segmentos = texto.split(' ')
@@ -15,7 +22,7 @@ try:
 except ZeroDivisionError:
     longitud_promedio = 0.0
 
-plantilla  = "Longitud promedio de {contador} palabras encontrados "
+plantilla  = "\n Longitud promedio de {contador} palabras encontradas "
 plantilla += "en un texto de {longitud_texto} caracteres: {promedio:.2f}"
 print(
     plantilla.format(

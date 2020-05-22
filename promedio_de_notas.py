@@ -1,3 +1,10 @@
+# Name: promedio_de_notas.py
+# Version: 0.1
+# Author: Cesar Villegas Ureta - https//www.slayerx.org/
+# GitHub repo: https://github.com/cvillegas/python_examples
+# License: MIT License
+# Description: Sacar promedio de las notas ingresadas
+
 """
 Escribir un programa que solicite el ingreso por teclado
 de un valor flotante  entre 0.0 y 20.0 que corresponde a la
@@ -33,6 +40,8 @@ FINALIZADOR = -1
 acumulador = 0.0
 contador = 0
 
+print("Para dejar de ingresar más notas y obtener el promedio deberá ingresarse el valor `-1` \n")
+
 # Leer infinitas notas
 while True: 
     # Lee una nota
@@ -66,5 +75,5 @@ try:
 except ZeroDivisionError:
     promedio = 0.0
 
-print(f"Notas ingresadas: {contador}")
+print(f"\n Notas ingresadas: {contador}")
 print(f"Promedio de notas: {promedio:.2f}")
