@@ -3,7 +3,7 @@
 # Author: Cesar Villegas Ureta - https//www.slayerx.org/
 # GitHub repo: https://github.com/cvillegas/python_examples
 # License: MIT License
-# Description: Generador de jugados de la lotería peruana "La Tinka"
+# Description: Generador de jugadas de la lotería peruana "La Tinka"
 
 import json
 from random import sample
