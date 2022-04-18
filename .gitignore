@@ -1,0 +1,6 @@
+*.json
+*.key
+*.pp*
+*.env
+*.tf
+
