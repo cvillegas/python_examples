@@ -30,29 +30,25 @@ def gen_dni():
 def gen_sexo(genero,nombres):
     sexo = choice(SEXO)
     if sexo == "M":
-        genero = "MASCULINO"
-        NOMBRES = tuple(
+        nombres = tuple(
            open('nombres_hombres.txt').read().splitlines()
         )
     else:
-        genero = "FEMENINO"
-        NOMBRES = tuple(
+        nombres = tuple(
             open('nombres_mujeres.txt').read().splitlines()
         )
-    return genero,nombres
+    return genero,choice(nombres)
 
-
-#def gen_nombre():
-
-
-'''
 while len(lista_clientes) < NRO_CLIENTES: 
 
+    dni = gen_dni()
 
+    # generamos sexo
+    genero, nombres = gen_sexo()
 
     # generamos nombre
     cantidad_nombres = randint(1,3)
-    nombres = " ".join(sample(NOMBRES,cantidad_nombres))
+    nombres = " ".join(sample(nombres,cantidad_nombres))
     nombres = nombres.upper()
     APELLIDOS = tuple(
         open('apellidos.txt').read().splitlines()
@@ -106,7 +102,8 @@ while len(lista_clientes) < NRO_CLIENTES:
 
         cadena_texto += str(dni) + "," + nombres + "," + apellido_paterno + "," + apellido_materno + "," + genero + "," + str(fecha_nacimiento) + "," + email + "," + str(uuidcod) + "\n"
 
-
+        lista_dni.append(dni)
+        lista_emails.append(email)
 
 #print(cadena_texto)
 
@@ -114,11 +111,12 @@ while len(lista_clientes) < NRO_CLIENTES:
 
 with io.open('clientes.csv','w',encoding='utf8') as f:
     f.write(cadena_texto)
-'''
+
 
 if __name__ == "__main__": 
     # generamos DNI 
     print(gen_dni())
     # generamos sexo 
     print(gen_sexo())
+    
     
